@@ -77,7 +77,7 @@ Our value of `y` is squared and compared against the secret value. We need to ge
 
 With the information we have, we can craft an implicit expression for `y`
 
-$$y^2 \equiv x \cdot vs_{m_0} \cdot vs_{m_1} \cdot vs_{m_2} \cdot  \cdot vs_{m_31} \text{ (mod n)}$$ 
+$$y^2 \equiv x \cdot vs_{m_0} \cdot vs_{m_1} \cdot vs_{m_2} \cdot ...   \cdot vs_{m_31} \text{ (mod n)}$$ 
 
 where $m_i$ is the mask bit at index $i$ and, 
 $$
@@ -86,7 +86,6 @@ $$
   vs_i & \text{ if } m_i = 1 \\ 
   0 & \text{ if }  m_i = 0 
  \end{cases}
-
 $$
 
 
@@ -103,7 +102,7 @@ Note that although `x > 0`, it doesn't actually check that `x % n != 0`. Given t
 
 $$
 \begin{align*}
-y^2 &\equiv $
+y^2 &\equiv x \cdot vs_{m_0} \cdot vs_{m_1} \cdot vs_{m_2} \cdot  \cdot vs_{m_31} \text{ (mod n)} \\
 &\equiv 0 \cdot vs_{m_0} \cdot vs_{m_1} \cdot vs_{m_2} \cdot  \cdot vs_{m_31} \text{ (mod n)} \\
 &\equiv 0 \text{ (mod n)}
 \end{align*}
@@ -120,7 +119,7 @@ Alright, now I presume that there should have been a check that asserts that you
 
 If we can predict what our `mask` would be before we provide `x`, then we can enter an `x` such that $y^2 \equiv 1 \text{ (mod n)}$. In other words, we need to choose `x` such that
 
-$x \cdot vs_{m_0} \cdot vs_{m_1} \cdot vs_{m_2} \cdot  \cdot vs_{m_31} \equiv 1 \text{ (mod n)}$
+$x \cdot vs_{m_0} \cdot vs_{m_1} \cdot vs_{m_2} \cdot ... \cdot vs_{m_31} \equiv 1 \text{ (mod n)}$
 
 This value of $x$ can be trivially found through a simple modular inverse. 
 
