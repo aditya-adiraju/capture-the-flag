@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "solution"
+version = "0.1.0"
+description = "Poetry is making this overkill lol"
+authors = ["aditya-adiraju <adiraju@student.ubc.ca>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+randcrack = "^0.2.0"
+pwntools = "^4.12.0"
+tqdm = "^4.66.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
