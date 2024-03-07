@@ -1,0 +1,4 @@
+Roll 1: 99. Timestamp: 1709422835
+Prev 77. Next: 71
+Roll 2: 100. Timestamp: 1709422881
+Prev 9. Next: 42
