@@ -190,9 +190,18 @@ emrsu
 
 Through this for our final guess, we can wordle this out to be `serum` and get our flag. (You just gotta be good at guessing lol). 
 
+
+
+My solve:
+
+![my solve](./solve.png)
+
+
 ## Conclusion
 
 It's a fun chall and I have the solve scripts in the same repo if you want to see it. Group theory is weird but pretty fun!!!
+
+
 
 
 
