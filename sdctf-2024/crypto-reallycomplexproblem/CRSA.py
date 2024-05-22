@@ -86,7 +86,7 @@ if __name__ == "__main__":
     flag = None
     with open("flag.txt", "r") as f:
         flag = f.read()
-    (public_key, _, primes) = generate_keys(512)
+    (public_key, private_key, primes) = generate_keys(512)
     (p, q) = primes
     (N, e) = public_key
     print(f"N = {N}")
@@ -96,7 +96,10 @@ if __name__ == "__main__":
     real = int(hexlify(flag1).decode(), 16)
     imag = int(hexlify(flag2).decode(), 16)
     message = GaussianRational(Fraction(real), Fraction(imag))
+    print(f"original: ",  message)
     ciphertext = encrypt(message, public_key)
+    message = decrypt(ciphertext, private_key)
+    print(f"decrypt", message)
     print(f"ciphertext = {ciphertext}")
     print(f"\n-- THE FOLLOWING IS YOUR SECRET KEY. DO NOT SHOW THIS TO ANYONE ELSE --")
     print(f"p = {p}")
