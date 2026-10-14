@@ -4,7 +4,7 @@
 | ---- | ---- | 
 | Category | Web |
 | Author | cryptocat |
-| Attachments | [dist.zip](./dist/src/main.rs) |
+| Attachments | [dist.zip](https://github.com/sajjadium/ctf-archives/tree/main/ctfs/1337UP/2024/web/SafeNotes_2.0/) |
 | Tags | XSS, DOM Clobbering, CSPT |
 
 ## Fun facts/Ground Rules
